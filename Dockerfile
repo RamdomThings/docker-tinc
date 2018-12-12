@@ -15,3 +15,4 @@ VOLUME /etc/tinc
 
 ENTRYPOINT [ "/usr/sbin/tinc" ]
 CMD [ "start", "-D", "-U", "nobody" ]
+
