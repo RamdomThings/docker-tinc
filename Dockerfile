@@ -13,6 +13,6 @@ RUN echo "deb http://http.debian.net/debian experimental main" >> /etc/apt/sourc
 EXPOSE 655/tcp 655/udp
 VOLUME /etc/tinc
 
-ENTRYPOINT [ "/usr/sbin/tinc" ]
+ENTRYPOINT [ "/usr/sbin/tincd" ]
 CMD [ "start", "-D", "-U", "nobody" ]
 
