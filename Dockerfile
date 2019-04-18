@@ -6,10 +6,11 @@ RUN apk add --no-cache ca-certificates \
                        man \
                        tinc-pre \
                        tinc-pre-doc \
-                       bash
+                       bash \
+                       git
 
 EXPOSE 655/tcp 655/udp
 VOLUME /etc/tinc
+ADD entrypoint.sh /
 
-ENTRYPOINT [ "/usr/sbin/tincd" ]
-CMD [ "-D", "-U", "nobody" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
